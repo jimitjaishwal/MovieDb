@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.android.jimitjaishwal.popularmovies.app.Details">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+
+            android:id="@+id/toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <FrameLayout
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:id="@+id/frame2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/backDrop_path"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/path" />
+
+            <ImageButton
+                android:id="@+id/play_button"
+                style="@style/play_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:layout_collapseMode="parallax"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        </FrameLayout>
+
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="200dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="4dp">
+
+            <include layout="@layout/content_details" />
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_favorite_border_white_24dp" />
+
+
+</android.support.design.widget.CoordinatorLayout>

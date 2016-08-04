@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="pref_sortBy_title">
+        <item>@string/pref_movie_sort_by_popularMovies</item>
+        <item>@string/pref_movie_sortby_voteAverage_title</item>
+    </string-array>
+
+    <string-array name="pref_sortBy_value">
+        <item>@string/pref_movie_sort_by_popularMovies_desc</item>
+        <item>@string/pref_movie_sortby_voteAverage_desc</item>
+    </string-array>
+
+</resources>

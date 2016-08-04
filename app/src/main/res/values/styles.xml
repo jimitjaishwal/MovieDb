@@ -1,0 +1,45 @@
+<resources xmlns:android="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="detail_theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="favourite_button" parent="Widget.AppCompat.Light.ActionButton">
+        <item name="android:height">24dp</item>
+        <item name="android:width">24dp</item>
+        <item name="android:src">@drawable/ic_favorite_border_white_24dp</item>
+    </style>
+
+    <style name="favourite_button_clicked" parent="Widget.AppCompat.Light.ActionButton">
+        <item name="android:height">@dimen/abc_action_button_min_height_material</item>
+        <item name="android:width">@dimen/abc_action_button_min_height_material</item>
+        <item name="android:src">@drawable/ic_favorite_black_48dp</item>
+    </style>
+
+    <style name="play_button" parent="Widget.AppCompat.Light.ActionButton">
+        <item name="android:height">@dimen/abc_action_button_min_height_material</item>
+        <item name="android:width">@dimen/abc_action_button_min_height_material</item>
+        <item name="android:src">@drawable/ic_play_circle_filled_black_48dp</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

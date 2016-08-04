@@ -1,0 +1,121 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.android.jimitjaishwal.popularmovies.app.DetailsFragment"
+    tools:showIn="@layout/activity_details">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/detail_poster"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/detail_poster_margin"
+                android:adjustViewBounds="true"
+                android:src="@drawable/poster"
+                app:layout_anchor="@id/coordinator_layout"
+                app:layout_anchorGravity="bottom|left" />
+
+            <TextView
+                android:id="@+id/detail_original_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:layout_toEndOf="@+id/detail_poster"
+                android:fontFamily="sans-serif_medium"
+                android:lineSpacingMultiplier="1.1"
+                android:text="Jurasic Word"
+                android:textColor="@color/colorPrimaryBlack"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/detail_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_original_title"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:layout_toEndOf="@+id/detail_poster"
+                android:lineSpacingMultiplier="1.1"
+                android:text="Octomber 2011"
+                android:textColor="@color/colorPrimaryBlack"
+                android:textSize="@dimen/text_size_small" />
+
+            <TextView
+                android:id="@+id/vote_average"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_release_date"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:layout_toEndOf="@+id/detail_poster"
+                android:lineSpacingMultiplier="1.1"
+                android:text="8.2/10"
+                android:textColor="@color/colorPrimaryBlack"
+                android:textSize="@dimen/text_size_small" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/detail_poster"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/colorPrimaryGray" />
+
+            <TextView
+                android:id="@+id/overView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/view"
+                android:layout_margin="@dimen/layout_margin"
+                android:lineSpacingMultiplier="1.1"
+                android:text="8.2/10"
+                android:textColor="@color/colorPrimaryBlack"
+                android:textSize="@dimen/text_size_small" />
+
+            <View
+                android:id="@+id/below_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/overView"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/colorPrimaryGray" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/trailer_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/below_view"
+                android:layout_margin="16dp"
+                android:scrollbarStyle="insideInset"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <View
+                android:id="@+id/below_Recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/trailer_recyclerView"
+                android:background="@color/colorPrimaryGray" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/below_Recycler_view">
+
+
+                <include layout="@layout/review_details" />
+            </FrameLayout>
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>
